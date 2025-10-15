@@ -1,0 +1,977 @@
+<!doctype html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- add favicon -->
+  <link rel="icon" type="image/png" href="assets/images/fav-icon.webp" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Carattere&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+
+  <style type="text/tailwindcss">
+    @theme {
+        --font-carattere: "Carattere", cursive;
+        --font-inter: "Inter", sans-serif;
+      }
+     
+    .carousel-image {
+      position: absolute;
+      border-radius: 50%;
+      border: 1px solid #f425258e; 
+      transition: all 0.5s ease;
+      opacity: 0;
+      transform: translate(-50%, -50%) scale(0.8);
+      height: 132px;
+      width:132px
+    }
+
+    .carousel-image.active {
+      border-color: #f42525; 
+      opacity: 1;
+      transform: translate(-50%, -50%) scale(1);
+      padding: 4px;
+      z-index: 10;
+    }
+    </style>
+</head>
+
+<body class="bg-[#F9F7F3]">
+
+  <!-- Hero section -->
+  <section
+    class="hidd en bg-cover bg-no-repeat flex flex-col items-center text-center pb-14 sm:pb-[105px] 2xl:pb-[205px]"
+    style="background-image: url('assets/images/hero.gif');">
+    <div class="logo-area bg-black sm:py-[12px] py-2 px-6 sm:px-[58px] rounded-b-xl">
+      <a href="https://mirojewelers.com/">
+        <img class="w-[140px] sm:w-[161px]" src="assets/images/logo.png" alt="Miro Jewelers" width="" height="">
+      </a>
+    </div>
+    <div class="content-area pt-12 sm:pt-24 2xl:pt-48 lg:max-w-[925px] lg:px-3 px-8 max-[420px]:px-2">
+      <p class="text-base sm:text-xl lg:text-2xl">MIRO JEWELERS ONLY FOR YOU</p>
+      <h1 class="text-5xl lg:text-7xl xl:text-[92px] 2xl:leading-[1.2] font-carattere pt-6">A reflection of your grace,
+        designed to fo last beyond a lifetime</h1>
+      <div class="grid grid-cols-3 lg:grid-cols-6 text-center pt-[34px] gap-y-4 sm:gap-y-6 lg:gap-0">
+        <div class="text-center border-[#373737] border-e px-3 pb-1">
+          <img class="object-contain mx-auto aspect-square sm:w-[58px] w-[40px]" src="assets/images/eg.png" height="58"
+            width="58" alt="Engagement Rings">
+          <p class="font-inter text-sm max-[420px]:text-xs sm:text-lg xl:text-xl font-normal">
+            Engagement Rings
+          </p>
+        </div>
+
+        <div class="text-center border-[#373737] border-e px-3 pb-1">
+          <img class="object-contain mx-auto aspect-square sm:w-[58px] w-[40px]" src="assets/images/wb.png" height="58"
+            width="58" alt="Engagement Rings">
+          <p class="font-inter text-sm max-[420px]:text-xs sm:text-lg xl:text-xl font-normal">
+            Wedding Bands
+          </p>
+        </div>
+
+        <div class="text-center border-[#373737] lg:border-e px-3 pb-1">
+          <img class="object-contain mx-auto aspect-square sm:w-[58px] w-[40px]" src="assets/images/diamond.png"
+            height="58" width="58" alt="Engagement Rings">
+          <p class="font-inter text-sm max-[420px]:text-xs sm:text-lg xl:text-xl font-normal">
+            Diamonds
+          </p>
+        </div>
+
+        <div class="text-center border-[#373737] border-e px-3 pb-1">
+          <img class="object-contain mx-auto aspect-square sm:w-[58px] w-[40px]" src="assets/images/cd.png" height="58"
+            width="58" alt="Engagement Rings">
+          <p class="font-inter text-sm max-[420px]:text-xs sm:text-lg xl:text-xl font-normal">
+            Custom Designs
+          </p>
+        </div>
+
+        <div class="text-center border-[#373737] border-e px-3 pb-1">
+          <img class="object-contain mx-auto aspect-square sm:w-[58px] w-[40px]" src="assets/images/eg.png" height="58"
+            width="58" alt="Engagement Rings">
+          <p class="font-inter text-sm max-[420px]:text-xs sm:text-lg xl:text-xl font-normal">
+            Gemstone Jewelry
+          </p>
+        </div>
+
+        <div class="text-center px-3 pb-1">
+          <img class="object-contain mx-auto aspect-square sm:w-[58px] w-[40px]" src="assets/images/jewelry.png"
+            height="58" width="58" alt="Engagement Rings">
+          <p class="font-inter text-sm max-[420px]:text-xs sm:text-lg xl:text-xl font-normal">
+            Jewelry Repair
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End hero section -->
+
+  <!-- Collections Grid -->
+  <section class="hidd en grid lg:grid-cols-4 grid-cols-2">
+    <div class="max-lg:order-1">
+      <a href="https://mirojewelers.com/collections/earrings" class="block relative">
+        <div
+          class="4xl:h-[620px] 2xl:h-[580px] min-[1282px]:h-[400px] max-[1281px]:h-[300px] sm:h -[280px] h-[250px] max-[420px]:h-[200px] overflow-hidden group">
+          <img src="https://mirojewelers.com/cdn/shop/files/earings-banner.webp?v=1745306828" alt="Everyday Elegance"
+            class="w-full h-full object-cover object-center transform transition-transform duration-700 ease-in-out group-hover:scale-105"
+            height="" width="">
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-b from-[#D4AF37]/30 to-[#0B132B]/20"></div>
+        </div>
+        <div class="p-3 sm:p-4 absolute bottom-0">
+          <h4 class="text-xs max-sm:uppercase  md:text-lg font-semibold text-black">
+            Everyday Elegance
+          </h4>
+        </div>
+      </a>
+    </div>
+
+    <div class="max-lg:order-2">
+      <a href="https://mirojewelers.com/collections/wedding-bands" class="block relative">
+        <div
+          class="4xl:h-[620px] 2xl:h-[580px] min-[1282px]:h-[400px] max-[1281px]:h-[300px] sm:h -[280px] h-[250px] max-[420px]:h-[200px] overflow-hidden group">
+          <img src="assets/images/forever.png" alt="Bound by Forever"
+            class="w-full h-full object-cover object-center transform transition-transform duration-700 ease-in-out group-hover:scale-105"
+            height="100" width="100">
+          <!-- Overlay content -->
+        </div>
+        <div
+          class="p-3 sm:p-4 absolute bottom-0 w-full bg-gradient-to-t from-white/100 via-white/80 to-100% h-3/4 md:h-1/2 xl:h-1/4 flex flex-col justify-end items-start">
+          <h4 class="text-xs max-sm:uppercase  md:text-lg font-semibold text-black">
+            Bound by Forever
+          </h4>
+          <p class="mt-1 inline-block text-black text-xs sm:text-base font-medium border-b">
+            Explore Now
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <div class="max-lg:order-4">
+      <a href="https://mirojewelers.com/collections/pendant-necklaces" class="block relative">
+        <div
+          class="4xl:h-[620px] 2xl:h-[580px] min-[1282px]:h-[400px] max-[1281px]:h-[300px] sm:h -[280px] h-[250px] max-[420px]:h-[200px] overflow-hidden group">
+          <img src="assets/images/necklace.webp" alt="Timeless Brilliance"
+            class="w-full h-full object-cover object-center transform transition-transform duration-700 ease-in-out group-hover:scale-105"
+            height="100" width="100">
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-b from-[#D4AF37]/30 to-[#0B132B]/20"></div>
+        </div>
+        <div class="p-3 sm:p-4 absolute bottom-0">
+          <h4 class="text-xs max-sm:uppercase  md:text-lg font-semibold text-black">
+            Timeless Brilliance
+          </h4>
+        </div>
+      </a>
+    </div>
+
+    <div class="max-lg:order-3">
+      <a href="https://mirojewelers.com/collections/engagement-rings" class="block relative">
+        <div
+          class="4xl:h-[620px] 2xl:h-[580px] min-[1282px]:h-[400px] max-[1281px]:h-[300px] sm:h -[280px] h-[250px] max-[420px]:h-[200px] overflow-hidden group">
+          <img src="assets/images/love.png" alt="Love Stories in Motion"
+            class="w-full h-full object-cover object-center transform transition-transform duration-700 ease-in-out group-hover:scale-105"
+            height="100" width="100">
+          <!-- Overlay content -->
+        </div>
+        <div
+          class="p-3 sm:p-4 absolute bottom-0 w-full bg-gradient-to-t from-white/100 via-white/80 to-100% h-3/4 md:h-1/2 xl:h-1/4 flex flex-col justify-end items-start">
+          <h4 class="text-xs max-sm:uppercase  md:text-lg font-semibold text-black">
+            Love Stories in Motion
+          </h4>
+          <p class="mt-1 inline-block text-black text-xs sm:text-base font-medium border-b">
+            Explore Now
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <div class="max-lg:order-6">
+      <a href="https://mirojewelers.com/collections/rings" class="block relative">
+        <div
+          class="4xl:h-[620px] 2xl:h-[580px] min-[1282px]:h-[400px] max-[1281px]:h-[300px] sm:h -[280px] h-[250px] max-[420px]:h-[200px] overflow-hidden group">
+          <img src="/assets/images/moments.png" alt="A Spark That Lasts a Lifetime"
+            class="w-full h-full object-cover object-center transform transition-transform duration-700 ease-in-out group-hover:scale-105"
+            height="100" width="100">
+          <!-- Overlay content -->
+        </div>
+        <div
+          class="p-3 sm:p-4 absolute bottom-0 w-full bg-gradient-to-t from-white/100 via-white/80 to-100% h-3/4 md:h-1/2 xl:h-1/4 flex flex-col justify-end items-start">
+          <h4 class="text-xs max-sm:uppercase  md:text-lg font-semibold text-black">
+            Moments that Sparkle
+          </h4>
+          <p class="mt-1 inline-block text-black text-xs sm:text-base font-medium border-b">
+            Explore Now
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <div class="max-lg:order-5">
+      <a href="https://mirojewelers.com/collections/bracelets-bangles" class="block relative">
+        <div
+          class="4xl:h-[620px] 2xl:h-[580px] min-[1282px]:h-[400px] max-[1281px]:h-[300px] sm:h -[280px] h-[250px] max-[420px]:h-[200px] overflow-hidden group">
+          <img src="assets/images/bracelet.webp" alt="Grace in Every Detail"
+            class="w-full h-full object-cover object-center transform transition-transform duration-700 ease-in-out group-hover:scale-105"
+            height="100" width="100">
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-b from-[#D4AF37]/30 to-[#0B132B]/20"></div>
+        </div>
+        <div class="p-3 sm:p-4 absolute bottom-0">
+          <h4 class="text-xs max-sm:uppercase  md:text-lg font-semibold text-black">
+            Grace in Every Detail
+          </h4>
+        </div>
+      </a>
+    </div>
+
+    <div class="max-lg:order-7">
+      <a href="https://mirojewelers.com/collections/stud-earrings" class="block relative">
+        <div
+          class="4xl:h-[620px] 2xl:h-[580px] min-[1282px]:h-[400px] max-[1281px]:h-[300px] sm:h -[280px] h-[250px] max-[420px]:h-[200px] overflow-hidden group">
+          <img src="assets/images/ne.png" alt="A Spark That Lasts a Lifetime"
+            class="w-full h-full object-cover object-center transform transition-transform duration-700 ease-in-out group-hover:scale-105"
+            height="100" width="100">
+          <!-- Overlay content -->
+        </div>
+        <div
+          class="p-3 sm:p-4 absolute bottom-0 w-full bg-gradient-to-t from-white/100 via-white/80 to-100% h-3/4 md:h-1/2 xl:h-1/4 flex flex-col justify-end items-start">
+          <h4 class="text-xs max-sm:uppercase  md:text-lg font-semibold text-black">
+            Moments that Sparkle
+          </h4>
+          <p class="mt-1 inline-block text-black text-xs sm:text-base font-medium border-b">
+            Explore Now
+          </p>
+        </div>
+      </a>
+    </div>
+
+    <div class="max-lg:order-8">
+      <a href="https://mirojewelers.com/collections/eternity-bands" class="block relative">
+        <div
+          class="4xl:h-[620px] 2xl:h-[580px] min-[1282px]:h-[400px] max-[1281px]:h-[300px] sm:h -[280px] h-[250px] max-[420px]:h-[200px] overflow-hidden group">
+          <img src="/assets/images/hand-rings.png" alt="Everyday Elegance"
+            class="w-full h-full object-cover object-center transform transition-transform duration-700 ease-in-out group-hover:scale-105"
+            height="100" width="100">
+          <!-- Overlay -->
+          <div class="absolute inset-0 bg-gradient-to-b from-[#D4AF37]/30 to-[#0B132B]/20"></div>
+        </div>
+        <div class="p-3 sm:p-4 absolute bottom-0">
+          <h4 class="text-xs max-sm:uppercase  md:text-lg font-semibold text-black">
+            Statement of Strength
+          </h4>
+        </div>
+      </a>
+    </div>
+  </section>
+  <!-- End Collections Grid -->
+
+  <!-- Features Section -->
+  <section class="hidd en px-3 sm:px-6 py-16">
+    <div class="2xl:max-w-7xl max-w-8xl mx-auto">
+      <div class="grid grid-cols-3 lg:grid-cols-6 gap-3 xl:gap-5 2xl:gap-2 text-center">
+        <div class="text-center">
+          <img fetchpriority="high" class="inline w-10 object-contain" src="assets/images/genuine.png" height="100"
+            width="100" alt="usp" title="usp">
+          <p class="pt-2 text-xs sm:text-sm md:text-base font-semibold ">
+            100% Genuine Product
+          </p>
+        </div>
+
+        <div class="text-center">
+          <img fetchpriority="high" class="inline w-10 object-contain" src="assets/images/top-brand.png" height="100"
+            width="100" alt="usp" title="usp">
+          <p class="pt-2 text-xs sm:text-sm md:text-base font-semibold font-inter">
+            Top Brand
+          </p>
+        </div>
+
+        <div class="text-center">
+          <img fetchpriority="high" class="inline w-10 object-contain" src="assets/images/best-price.png" height="100"
+            width="100" alt="usp" title="usp">
+          <p class="pt-2 text-xs sm:text-sm md:text-base font-semibold font-inter">
+            Assured Best Price
+          </p>
+        </div>
+
+        <div class="text-center">
+          <img fetchpriority="high" class="inline w-10 object-contain" src="assets/images/customer-support.png"
+            height="100" width="100" alt="usp" title="usp">
+          <p class="pt-2 text-xs sm:text-sm md:text-base font-semibold font-inter">
+            Customer Support
+          </p>
+        </div>
+
+        <div class="text-center">
+          <img fetchpriority="high" class="inline w-10 object-contain" src="assets/images/secure.png" height="100"
+            width="100" alt="usp" title="usp">
+          <p class="pt-2 text-xs sm:text-sm md:text-base font-semibold font-inter">
+            Secure transaction
+          </p>
+        </div>
+
+        <div class="text-center">
+          <img fetchpriority="high" class="inline w-10 object-contain" src="assets/images/certified.png" height="100"
+            width="100" alt="usp" title="usp">
+          <p class="pt-2 text-xs sm:text-sm md:text-base font-semibold font-inter">
+            Certified
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End Features Section -->
+
+  <!-- Products -->
+  <section class="hidd en border-[#0000007A] border-y ">
+    <div class="">
+      <div class="grid grid-cols-2 sm:grid-cols-3 items-center">
+        <a href="https://mirojewelers.com/products/verragio-mens-wedding-band-vwfx-8504?variant=43600178118825"
+          class="text-center h-full flex col-span-2 items-center 2xl:px-8 px-3 sm:py-8 py-4 border-[#0000007A] sm:border-e">
+          <div class="group overflow-hidden max-[991px]:w-100">
+            <img src="https://mirojewelers.com/cdn/shop/files/VWFX-8504.R1.webp?v=1727412417&width=800"
+              alt="Engagement Ring"
+              class="object-contain transform transition-transform duration-700 ease-in-out group-hover:scale-105 mix-blend-darken">
+          </div>
+          <div class="xl:pe-12 max-[991px]:w-100 space-y-4">
+            <h4
+              class="font-inter text-sm max-[500px]:text-xs sm:text-base lg:text-xl xl:text-2xl font-semibold uppercase">
+              Verragio Men's Wedding Band VWFX-8504
+            </h4>
+            <p class="font-inter text-sm max-[500px]:text-xs sm:text-lg">$3,520.00</p>
+
+            <div class="flex gap-3 justify-center items-center">
+              <span class="flex gap-1">
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.20831 1.29056C9.31836 1.10172 9.476 0.945031 9.6655 0.836131C9.855 0.72723 10.0697 0.669922 10.2883 0.669922C10.5069 0.669922 10.7216 0.72723 10.9111 0.836131C11.1006 0.945031 11.2583 1.10172 11.3683 1.29056L14.1633 6.08856L19.5913 7.26456C19.8048 7.31095 20.0024 7.41251 20.1645 7.55909C20.3265 7.70567 20.4473 7.89217 20.5148 8.09998C20.5823 8.30779 20.5941 8.52967 20.5491 8.74348C20.5041 8.95729 20.4038 9.15557 20.2583 9.31856L16.5583 13.4596L17.1183 18.9846C17.1404 19.2021 17.105 19.4217 17.0157 19.6213C16.9265 19.8209 16.7864 19.9936 16.6094 20.1221C16.4325 20.2506 16.225 20.3305 16.0076 20.3538C15.7901 20.377 15.5704 20.3428 15.3703 20.2546L10.2883 18.0146L5.20632 20.2546C5.00623 20.3428 4.78651 20.377 4.56907 20.3538C4.35163 20.3305 4.1441 20.2506 3.96719 20.1221C3.79028 19.9936 3.65018 19.8209 3.56088 19.6213C3.47159 19.4217 3.43622 19.2021 3.45832 18.9846L4.01832 13.4596L0.318315 9.31956C0.172543 9.15658 0.0720706 8.95822 0.026929 8.74428C-0.0182127 8.53033 -0.00644447 8.30829 0.0610588 8.10031C0.128562 7.89234 0.249439 7.70571 0.411621 7.55906C0.573804 7.4124 0.771618 7.31086 0.985315 7.26456L6.41332 6.08856L9.20831 1.29056Z"
+                    fill="#F8BE00" />
+                </svg>
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.20831 1.29056C9.31836 1.10172 9.476 0.945031 9.6655 0.836131C9.855 0.72723 10.0697 0.669922 10.2883 0.669922C10.5069 0.669922 10.7216 0.72723 10.9111 0.836131C11.1006 0.945031 11.2583 1.10172 11.3683 1.29056L14.1633 6.08856L19.5913 7.26456C19.8048 7.31095 20.0024 7.41251 20.1645 7.55909C20.3265 7.70567 20.4473 7.89217 20.5148 8.09998C20.5823 8.30779 20.5941 8.52967 20.5491 8.74348C20.5041 8.95729 20.4038 9.15557 20.2583 9.31856L16.5583 13.4596L17.1183 18.9846C17.1404 19.2021 17.105 19.4217 17.0157 19.6213C16.9265 19.8209 16.7864 19.9936 16.6094 20.1221C16.4325 20.2506 16.225 20.3305 16.0076 20.3538C15.7901 20.377 15.5704 20.3428 15.3703 20.2546L10.2883 18.0146L5.20632 20.2546C5.00623 20.3428 4.78651 20.377 4.56907 20.3538C4.35163 20.3305 4.1441 20.2506 3.96719 20.1221C3.79028 19.9936 3.65018 19.8209 3.56088 19.6213C3.47159 19.4217 3.43622 19.2021 3.45832 18.9846L4.01832 13.4596L0.318315 9.31956C0.172543 9.15658 0.0720706 8.95822 0.026929 8.74428C-0.0182127 8.53033 -0.00644447 8.30829 0.0610588 8.10031C0.128562 7.89234 0.249439 7.70571 0.411621 7.55906C0.573804 7.4124 0.771618 7.31086 0.985315 7.26456L6.41332 6.08856L9.20831 1.29056Z"
+                    fill="#F8BE00" />
+                </svg>
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.20831 1.29056C9.31836 1.10172 9.476 0.945031 9.6655 0.836131C9.855 0.72723 10.0697 0.669922 10.2883 0.669922C10.5069 0.669922 10.7216 0.72723 10.9111 0.836131C11.1006 0.945031 11.2583 1.10172 11.3683 1.29056L14.1633 6.08856L19.5913 7.26456C19.8048 7.31095 20.0024 7.41251 20.1645 7.55909C20.3265 7.70567 20.4473 7.89217 20.5148 8.09998C20.5823 8.30779 20.5941 8.52967 20.5491 8.74348C20.5041 8.95729 20.4038 9.15557 20.2583 9.31856L16.5583 13.4596L17.1183 18.9846C17.1404 19.2021 17.105 19.4217 17.0157 19.6213C16.9265 19.8209 16.7864 19.9936 16.6094 20.1221C16.4325 20.2506 16.225 20.3305 16.0076 20.3538C15.7901 20.377 15.5704 20.3428 15.3703 20.2546L10.2883 18.0146L5.20632 20.2546C5.00623 20.3428 4.78651 20.377 4.56907 20.3538C4.35163 20.3305 4.1441 20.2506 3.96719 20.1221C3.79028 19.9936 3.65018 19.8209 3.56088 19.6213C3.47159 19.4217 3.43622 19.2021 3.45832 18.9846L4.01832 13.4596L0.318315 9.31956C0.172543 9.15658 0.0720706 8.95822 0.026929 8.74428C-0.0182127 8.53033 -0.00644447 8.30829 0.0610588 8.10031C0.128562 7.89234 0.249439 7.70571 0.411621 7.55906C0.573804 7.4124 0.771618 7.31086 0.985315 7.26456L6.41332 6.08856L9.20831 1.29056Z"
+                    fill="#F8BE00" />
+                </svg>
+                <svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M9.20831 1.29056C9.31836 1.10172 9.476 0.945031 9.6655 0.836131C9.855 0.72723 10.0697 0.669922 10.2883 0.669922C10.5069 0.669922 10.7216 0.72723 10.9111 0.836131C11.1006 0.945031 11.2583 1.10172 11.3683 1.29056L14.1633 6.08856L19.5913 7.26456C19.8048 7.31095 20.0024 7.41251 20.1645 7.55909C20.3265 7.70567 20.4473 7.89217 20.5148 8.09998C20.5823 8.30779 20.5941 8.52967 20.5491 8.74348C20.5041 8.95729 20.4038 9.15557 20.2583 9.31856L16.5583 13.4596L17.1183 18.9846C17.1404 19.2021 17.105 19.4217 17.0157 19.6213C16.9265 19.8209 16.7864 19.9936 16.6094 20.1221C16.4325 20.2506 16.225 20.3305 16.0076 20.3538C15.7901 20.377 15.5704 20.3428 15.3703 20.2546L10.2883 18.0146L5.20632 20.2546C5.00623 20.3428 4.78651 20.377 4.56907 20.3538C4.35163 20.3305 4.1441 20.2506 3.96719 20.1221C3.79028 19.9936 3.65018 19.8209 3.56088 19.6213C3.47159 19.4217 3.43622 19.2021 3.45832 18.9846L4.01832 13.4596L0.318315 9.31956C0.172543 9.15658 0.0720706 8.95822 0.026929 8.74428C-0.0182127 8.53033 -0.00644447 8.30829 0.0610588 8.10031C0.128562 7.89234 0.249439 7.70571 0.411621 7.55906C0.573804 7.4124 0.771618 7.31086 0.985315 7.26456L6.41332 6.08856L9.20831 1.29056Z"
+                    fill="#F8BE00" />
+                </svg>
+
+              </span>
+              <p class="font-inter text-[10px] sm:text-xs leading-tight">5 reviews</p>
+
+            </div>
+          </div>
+        </a>
+
+        <a href="https://mirojewelers.com/products/emerald-cut-bezel-set-diamond-eternity-wedding-band?_pos=1&_psq=EMERALD+CUT+BEZEL+SET+DIAMOND+ETERNITY+WEDDING+BAND&_ss=e&_v=1.0"
+          class="text-center block 2xl:px-8 px-3 sm:py-8 py-4 border-[#0000007A] max-[640px]:border-t max-[640px]:h-full max-[640px]:border-e">
+          <div class="group overflow-hidden">
+            <img src="assets/images/diamond-p.png" alt="Engagement Ring"
+              class="object-contain transform transition-transform duration-700 ease-in-out group-hover:scale-105 max-h-[150px] sm:max-h-[300px] m-auto aspect-square">
+          </div>
+          <h4
+            class="font-inter text-sm max-[500px]:text-xs sm:text-base lg:text-xl xl:text-2xl font-semibold uppercase pt-4">
+            Emerald Cut Bezel Set Diamond Eternity Wedding Band
+          </h4>
+          <p class="font-inter text-sm max-[500px]:text-xs sm:text-lg pt-3">$7,200.00</p>
+        </a>
+        <a href="https://mirojewelers.com/products/verragio-venetian-solitaire-engagement-ring-5047pear?_pos=1&_psq=VERRAGIO+VENETIAN+SOLITAIRE+ENGAGEMENT+RING+5047PEAR&_ss=e&_v=1.0&variant=43763217498281"
+          class="text-center h-full block border-[#0000007A] border-t sm:border-e 2xl:px-8 px-3 sm:py-8 py-4">
+          <div class="group overflow-hidden">
+            <img src="assets/images/ring-p.png" alt="Engagement Ring"
+              class="object-contain transform transition-transform duration-700 ease-in-out group-hover:scale-105 2xl:max-h-[400px] lg:max-h-[300px] max-h-[150px] m-auto aspect-square">
+          </div>
+          <h4
+            class="font-inter text-sm max-[500px]:text-xs sm:text-base lg:text-xl xl:text-2xl font-semibold uppercase pt-4">
+            Verragio Venetian Solitaire Engagement Ring 5047PEAR
+          </h4>
+          <p class="font-inter text-sm max-[500px]:text-xs sm:text-lg pt-3">$3,400.00</p>
+        </a>
+
+        <a href="https://mirojewelers.com/products/verragio-wedding-bands-vwd-7910?_pos=1&_psq=VERRAGIO+WEDDING+BANDS+VWD-7910&_ss=e&_v=1.0"
+          class="text-center h-full block border-[#0000007A] border-t sm:border-e 2xl:px-8 px-3 sm:py-8 py-4 max-[640px]:border-e">
+          <div class="group overflow-hidden">
+            <img src="assets/images/bracelet-p.png" alt="Engagement Ring"
+              class="object-contain transform transition-transform duration-700 ease-in-out group-hover:scale-105 2xl:max-h-[400px] lg:max-h-[300px] max-h-[150px] m-auto aspect-square">
+          </div>
+          <h4
+            class="font-inter text-sm max-[500px]:text-xs sm:text-base lg:text-xl xl:text-2xl font-semibold uppercase pt-4">
+            Verragio Wedding Bands VWD-7910
+          </h4>
+          <p class="font-inter text-sm max-[500px]:text-xs sm:text-lg pt-3">$6,860.00</p>
+        </a>
+
+        <a href="https://mirojewelers.com/products/verragio-renaissance-solitairesol301r?_pos=1&_psq=VERRAGIO+RENAISSANCE+SOLITAIRESOL301R&_ss=e&_v=1.0"
+          class="text-center h-full block 2xl:px-8 px-3 sm:py-8 py-4 border-[#0000007A] border-t">
+          <div class="group overflow-hidden">
+            <img src="assets/images/gold-ring-p.png" alt="Engagement Ring"
+              class="object-contain transform transition-transform duration-700 ease-in-out group-hover:scale-105 2xl:max-h-[400px] lg:max-h-[300px] max-h-[150px] m-auto aspect-square">
+          </div>
+          <h4
+            class="font-inter text-sm max-[500px]:text-xs sm:text-base lg:text-xl xl:text-2xl font-semibold uppercase pt-4">
+            Verragio Renaissance SolitaireSOL301R
+          </h4>
+          <p class="font-inter text-sm max-[500px]:text-xs sm:text-lg pt-3">$2,750.00</p>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- End Products -->
+
+  <!-- Testimonial -->
+  <section class="text-center sm:py-20 py-16">
+    <h2 class="font-carattere text-3xl lg:text-5xl lg:px-0 px-3">What Our Customers Say</h2>
+    <p class="text-lg font-inter lg:w-[567px] mx-auto pt-2 lg:px-0 px-3">Real stories from real people! See how our
+      services have transformed their experiences.</p>
+    <!-- <div class="bg-center bg-contain bg-no-repeat h-[400px]" style="background-image: url(assets/images/testimonial-bg.png);"> -->
+    <div class="relative mt-8 sm:mt-12 bg- black">
+      <img
+        class="object-center 2xl:object-cover max-[1281px]:object-contain max-[1200px]:object-cover max-[1400px]:h-[300px] w-full"
+        src="assets/images/testimonial-bg.png" alt="testimonial bg">
+      <div class="flex flex-col items-center justify-center absolute top-0 w-full max-[1030px]:overflow-hidden">
+        <div
+          class="carousel-container relative w-full max-w-[80%] max-[1200px]:max-w-[96%] max-[1151px]:max-w-[100%] h-[350px] max-[1030px]:h-[300px] mx-auto overflow-visible"
+          id="carousel">
+          <img id="img0" class="carousel-image" src="assets/images/user1.png">
+          <img id="img1" class="carousel-image" src="assets/images/user2.png">
+          <img id="img2" class="carousel-image" src="assets/images/user3.png">
+          <img id="img3" class="carousel-image" src="assets/images/user4.png">
+          <img id="img4" class="carousel-image" src="assets/images/user5.png">
+          <img id="img5" class="carousel-image" src="assets/images/user6.png">
+          <img id="img6" class="carousel-image" src="assets/images/user7.png">
+          <img id="img7" class="carousel-image" src="assets/images/user8.png">
+          <img id="img8" class="carousel-image" src="assets/images/user9.webp">
+        </div>
+
+      </div>
+      <div
+        class="mt-0 md:mt-10 text-center min-[1300px]:max-w-[50%] max-[1300px]:max-w-[85%] max-[1000px]:max-w-[95%] mx-auto">
+        <div class="flex justify-between items-center gap-4">
+          <button id="prev" class="sm:w-14 sm:h-14 w-8 h-8 aspect-square cursor-pointer">
+            <img class="w-full h-full object-contain" src="assets/images/prev.png" alt="Previous">
+          </button>
+          <div class="font-inter text-sm sm:text-base sm:text-lg overflow-hidden" id="content-wrapper">
+            <div id="content" class="transition-opacity duration-500 opacity-100">
+              The gemstone’s color is breathtaking — it catches light from every angle.
+            </div>
+          </div>
+          <button id="next" class="sm:w-14 sm:h-14 w-8 h-8 aspect-square cursor-pointer">
+            <img class="w-full h-full object-contain" src="assets/images/next.png" alt="Next">
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Testimonials -->
+
+  <!-- For Him/Her section -->
+  <section class="hidd en xl:max-w-7xl mx-auto 2xl:px-0 px-3">
+    <div class="grid sm:grid-cols-2 gap-8">
+      <div>
+        <div class="group overflow-hidden">
+          <img src="assets/images/men-ring.png" alt="for him collection"
+            class="transform transition-transform duration-700 ease-in-out group-hover:scale-105 w-full xl:h-[680px] max-[640px]:h-[420px] object-cover">
+        </div>
+        <div class="flex flex-col gap-2 pt-4 sm:pt-7">
+          <h2 class="font-carattere text-3xl lg:text-5xl">For Him</h2>
+          <p class="font-inter text-lg">Sophisticated rings for man that make a statement.</p>
+          <a href="https://mirojewelers.com/collections/mens-wedding-bands"
+            class="font-inter text-base sm:text-lg border w-max px-6 py-2 sm:mt-3 hover:bg-black hover:text-white duration-500">Explore
+            Now</a>
+        </div>
+      </div>
+      <div>
+        <div class="group overflow-hidden">
+          <img src="assets/images/women-ring.png" alt="for her collection"
+            class="transform transition-transform duration-700 ease-in-out group-hover:scale-105 w-full xl:h-[680px] max-[640px]:h-[420px] object-cover">
+        </div>
+        <div class="flex flex-col gap-2 pt-4 sm:pt-7">
+          <h2 class="font-carattere text-3xl lg:text-5xl">For Her</h2>
+          <p class="font-inter text-lg">Beautiful rings made to capture grace and elegance for woman.</p>
+          <a href="https://mirojewelers.com/collections/womens-wedding-bands"
+            class="font-inter text-base sm:text-lg border w-max px-6 py-2 sm:mt-3 hover:bg-black hover:text-white duration-500">Explore
+            Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of For Him/Her section -->
+
+  <!-- left right section -->
+  <section class="hidd en sm:pt-20 pt-14 max-sm:pb-14">
+    <div class="grid sm:grid-cols-2">
+      <div>
+        <img class="h-full xl:h-[670px] 2xl:h-[840px] w-full object-cover object-center"
+          src="assets/images/miro-office.png" alt="Miro Jewelers office" width="" height="">
+      </div>
+      <div class="px-3 sm:p-10 max-sm:mt-8 flex flex-col justify-center">
+        <h2 class="font-carattere text-3xl lg:text-5xl lg:max-w-[527px]">
+          Experience personalized service — in-store or online, crafted entirely around you
+        </h2>
+        <p class="text-base sm:text-lg font-inter lg:max-w-[460px] pt-2">
+          In-store or online, every appointment is crafted around your style and story
+        </p>
+        <div class="lg:mt-7 xl:block grid max-[640px]-min-[540px]:grid-cols-2 max-[640px]-min-[540px]:gap-4">
+          <a href="https://mirojewelers.com/pages/custom-design"
+            class="font-inter text-base sm:text-lg border w-max px-6 py-3 mt-3 me-4 hover:bg-black hover:text-white duration-500 text-center max-[640px]:w-full">Explore
+            Now</a>
+          <a href="https://mirojewelers.com/pages/book-appointment"
+            class="font-inter text-base sm:text-lg border w-max xl:w-full px-6 py-3 mt-3 hover:bg-black hover:text-white duration-500 text-center max-[640px]:w-full">Book
+            an Appointment Now</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End of left right section -->
+
+  <!-- Subscription section -->
+  <section class="2xl:py-32 sm:py-20 py-14 bg-black">
+    <div class="xl:max-w-7xl mx-auto 2xl:px-0 px-3">
+      <div class="grid md:grid-cols-2 gap-8 lg:gap-16 items-center">
+        <div class="space-y-7">
+          <div class="lg:max-w-10/12 space-y-7">
+            <h2 class="font-carattere text-3xl lg:text-5xl text-white">Experience personalized service — in-store or
+            </h2>
+            <p class="text-lg font-inter text-white">In-store or online, every appointment is crafted around your style
+              and story</p>
+          </div>
+          <form method="post" class="flex items-center border border-white rounded-4xl overflow-hidden">
+            <input name="email" type="email" autocomplete="email"
+              class="bg-transparent border-0 ring-0 w-full p-3 sm:px-4 placeholder:text-white text-base font-inter text-white focus:outline-0"
+              placeholder="Enter your email">
+            <button class="text-white text-2xl cursor-pointer p-2 px-5" type="submit">
+              <svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1.5 20L10.5 11L1.5 2" stroke="white" stroke-width="2.25" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+            </button>
+          </form>
+        </div>
+
+        <div>
+          <svg class="mx-auto max-w-full h-44 sm:h-max" width="551" height="317" viewBox="0 0 551 317" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <path
+              d="M349.623 134.058C348.736 128.931 347.039 124.023 344.612 119.564C343.341 117.414 341.905 115.43 339.793 114.818C337.634 114.215 335.378 114.179 333.204 114.712C330.94 115.129 328.667 115.815 326.309 116.311C325.105 116.589 323.884 116.757 322.656 116.813C321.309 116.907 319.964 116.599 318.758 115.922C317.537 115.194 316.539 114.074 315.894 112.705C315.307 111.43 314.905 110.059 314.702 108.642C314.592 107.984 314.514 107.259 314.414 106.746C314.285 106.218 314.085 105.714 313.822 105.252C313.243 104.204 312.555 103.237 311.774 102.369L312.339 100.749C312.335 100.745 312.33 100.741 312.324 100.739C312.318 100.736 312.312 100.735 312.306 100.736C312.3 100.736 312.294 100.738 312.289 100.742C312.283 100.745 312.278 100.749 312.275 100.755C312.285 100.755 312.345 100.709 312.379 100.692C312.485 100.628 312.586 100.552 312.679 100.467C312.912 100.263 313.134 100.045 313.344 99.8121C313.787 99.3347 314.219 98.8105 314.639 98.2731C315.481 97.2006 316.294 96.0666 317.072 94.9291L317.98 95.9225C317.837 96.0136 317.687 96.0886 317.531 96.1463L317.215 96.2134C317.002 96.2575 316.831 96.257 316.637 96.2799C316.269 96.3003 315.91 96.3088 315.555 96.3032C314.845 96.2954 314.144 96.2622 313.446 96.2148C312.048 96.1261 310.663 95.981 309.272 95.8369L309.264 95.8361C309.183 95.8275 309.106 95.7937 309.041 95.7384C308.976 95.6831 308.927 95.6086 308.898 95.5233C308.686 94.891 308.443 94.2726 308.169 93.6712C307.897 93.1043 307.572 92.4431 307.207 92.283C306.124 91.8188 304.865 91.5157 303.681 91.1443C302.446 90.8085 301.23 90.393 300.039 89.9001C299.859 89.7955 299.703 89.6478 299.58 89.4675C299.458 89.2871 299.372 89.0787 299.33 88.8571C299.259 88.465 299.257 88.061 299.326 87.6683C299.449 86.9514 299.651 86.2544 299.928 85.5937C301.04 83.0749 302.339 80.6655 303.812 78.3911C304.511 77.3015 305.06 76.1 305.439 74.827C305.815 73.627 305.91 72.339 305.714 71.0864L305.732 71.146C304.967 68.8844 304.429 66.5344 304.13 64.1394C303.803 61.777 303.601 59.3952 303.524 57.0062C303.43 54.6242 303.425 52.2435 303.477 49.8658C303.528 47.4826 303.628 45.1226 303.83 42.7248C303.852 42.466 303.951 42.2231 304.111 42.0351C304.272 41.8471 304.484 41.7251 304.714 41.6887C304.944 41.6522 305.178 41.7036 305.378 41.8343C305.579 41.9651 305.734 42.1678 305.82 42.4095L305.835 42.4547C307.08 45.9696 308.557 49.3758 310.254 52.6452C311.926 55.9057 313.879 58.9746 316.086 61.8078C318.197 64.6088 320.815 66.8766 323.766 68.4611C325.204 69.2009 326.756 69.6247 328.337 69.7093C329.92 69.7648 331.5 69.5276 333.014 69.0072L332.291 69.9781C332.591 68.0683 333.126 66.2144 333.881 64.4692C334.275 63.5563 334.779 62.7084 335.379 61.9496C336.043 61.1181 336.901 60.5103 337.857 60.1941C338.352 60.0634 338.86 60.0134 339.368 60.0454C339.85 60.1008 340.324 60.2237 340.778 60.4111C341.65 60.7549 342.454 61.281 343.15 61.9615C344.463 63.3088 345.394 65.0582 345.827 66.9926C346.329 68.7593 346.722 70.5621 347.005 72.3885C347.317 74.2365 347.383 76.1263 347.199 77.9959C347.141 78.9689 346.887 79.9146 346.456 80.7621C346.025 81.6097 345.429 82.3371 344.711 82.89C343.201 83.7536 341.466 83.9891 339.815 83.5544C339.786 83.5492 339.759 83.531 339.742 83.504C339.724 83.477 339.717 83.4434 339.722 83.4104C339.727 83.3792 339.742 83.3511 339.765 83.3317C339.787 83.3122 339.815 83.3027 339.844 83.305C341.411 83.5582 343.01 83.2099 344.378 82.3168C344.97 81.7851 345.447 81.1096 345.771 80.3415C346.096 79.5733 346.26 78.7326 346.252 77.8829C346.265 74.3292 345.648 70.8079 344.437 67.5227C344.013 65.9233 343.183 64.4967 342.047 63.417C341.502 62.9166 340.877 62.5372 340.205 62.2992C339.895 62.182 339.574 62.1078 339.248 62.0782C339.096 62.0665 338.943 62.0784 338.793 62.1133C338.648 62.1509 338.486 62.1032 338.353 62.1986C337.736 62.5089 337.181 62.9571 336.724 63.5157C336.266 64.0742 335.915 64.7315 335.693 65.4472C335.077 67.0035 334.652 68.6464 334.432 70.3306L334.431 70.3372C334.4 70.5565 334.317 70.7623 334.189 70.9324C334.062 71.1024 333.896 71.2302 333.708 71.3019C331.952 71.9884 330.101 72.3139 328.242 72.2625C326.378 72.192 324.543 71.7245 322.836 70.8851C319.539 69.1969 316.621 66.7032 314.298 63.5872C311.992 60.6066 309.98 57.3568 308.296 53.8941C306.59 50.4728 305.116 46.9132 303.886 43.2452L305.891 42.9751C305.671 45.2703 305.513 47.6204 305.393 49.9496C305.278 52.2843 305.219 54.6228 305.247 56.9556C305.28 59.2867 305.33 61.6222 305.569 63.9262C305.755 66.2205 306.174 68.4835 306.819 70.6712L306.833 70.716L306.837 70.7315C307.054 72.2357 306.904 73.7777 306.401 75.1938C305.946 76.5445 305.311 77.8107 304.519 78.9497C303.031 81.1427 301.721 83.4792 300.602 85.9317C300.342 86.5252 300.149 87.1526 300.027 87.7994C299.912 88.4285 299.979 89.0227 300.374 89.234C300.923 89.4872 301.488 89.6928 302.065 89.8491L303.859 90.3795C305.07 90.7376 306.246 91.0202 307.502 91.4936C307.692 91.5737 307.865 91.6964 308.011 91.8543C308.14 91.9918 308.258 92.1423 308.363 92.3041C308.558 92.6006 308.735 92.9118 308.892 93.2353C309.2 93.8622 309.475 94.5083 309.717 95.1706L309.343 94.8573C310.719 94.9494 312.106 94.9961 313.482 95.0118C314.17 95.0197 314.858 95.0132 315.535 94.9823C315.875 94.9687 316.208 94.9412 316.533 94.9052C316.683 94.8776 316.861 94.8652 316.987 94.8273L317.181 94.7773C317.203 94.7589 317.191 94.7589 317.209 94.7717L318.033 95.3271C318.064 95.348 318.091 95.3754 318.112 95.408C318.134 95.4405 318.149 95.4774 318.158 95.5167C318.167 95.5559 318.169 95.5967 318.163 95.6367C318.158 95.6767 318.145 95.7151 318.127 95.7498L318.118 95.7654C317.367 96.9863 316.601 98.171 315.773 99.3348C315.361 99.9169 314.934 100.49 314.463 101.05C314.222 101.343 313.966 101.62 313.697 101.879C313.543 102.031 313.378 102.167 313.203 102.286C313.099 102.359 312.99 102.424 312.879 102.481C312.704 102.547 312.523 102.592 312.34 102.617L312.905 100.997C313.84 101.936 314.671 102.996 315.38 104.156C315.767 104.794 316.06 105.497 316.25 106.239C316.414 107.009 316.481 107.595 316.603 108.227C316.806 109.41 317.157 110.555 317.645 111.628C318.104 112.605 318.817 113.404 319.69 113.919C321.403 114.955 323.71 114.636 325.975 114.216C328.251 113.789 330.542 113.149 332.93 112.759C335.379 112.198 337.915 112.338 340.303 113.166C340.909 113.414 341.49 113.731 342.039 114.111L342.803 114.774C343.064 114.982 343.299 115.228 343.503 115.506L344.14 116.3C344.335 116.571 344.497 116.854 344.677 117.131C345.042 117.677 345.345 118.263 345.659 118.841C346.859 121.164 347.795 123.647 348.444 126.23C349.129 128.774 349.598 131.383 349.845 134.025C349.847 134.042 349.845 134.058 349.841 134.074C349.837 134.09 349.83 134.104 349.82 134.117C349.811 134.13 349.799 134.14 349.786 134.148C349.773 134.156 349.759 134.161 349.745 134.162C349.716 134.164 349.689 134.155 349.666 134.135C349.644 134.116 349.628 134.088 349.623 134.058Z"
+              fill="white" />
+            <path
+              d="M341.582 84.6368C339.758 88.4204 339.231 92.8191 340.099 97.0069C341.582 103.946 339.14 113.684 339.14 113.684C339.14 113.684 332.957 138.341 351.149 134.042C369.341 129.742 398.044 118.655 403.097 96.2527C403.097 96.2527 397.555 80.3394 394.406 75.2085C387.314 63.656 375.405 33.3463 369.543 28.8207C368.232 26.5404 366.525 24.5789 364.522 23.0532C358.454 18.1072 350.965 15.8512 343.499 16.7199C332.508 17.8648 314.81 22.9503 304.861 42.8502C304.861 42.8502 314.492 76.405 333.362 70.1548C333.362 70.1548 334.849 58.2871 341.334 61.8549C343.025 62.8368 344.323 64.4962 344.969 66.5021C346.685 71.5212 349.408 82.4377 341.582 84.6368Z"
+              fill="white" />
+            <path
+              d="M307.286 70.2298C307.699 69.4888 308.217 68.8285 308.821 68.2753C309.415 67.7085 310.069 67.2266 310.769 66.8408C311.483 66.4529 312.246 66.1912 313.031 66.0649C313.822 65.9372 314.63 66.0469 315.372 66.3829C313.94 66.6906 312.555 67.2256 311.258 67.9717C309.953 68.6674 308.701 69.4907 307.286 70.2298ZM312.339 76.8673C312.776 76.8504 313.19 76.6443 313.493 76.2926C313.797 75.9408 313.967 75.4708 313.967 74.9817C313.967 74.4926 313.797 74.0226 313.493 73.6708C313.19 73.319 312.776 73.1129 312.339 73.096C311.903 73.1129 311.489 73.319 311.186 73.6708C310.882 74.0226 310.712 74.4926 310.712 74.9817C310.712 75.4708 310.882 75.9408 311.186 76.2926C311.489 76.6443 311.903 76.8504 312.339 76.8673ZM403.1 96.0728C406.988 96.1612 410.858 96.69 414.65 97.6509C418.457 98.573 422.197 99.8111 425.84 101.355C429.498 102.876 433.067 104.653 436.526 106.677C438.226 107.75 439.966 108.75 441.607 109.937L444.101 111.66L446.517 113.516C452.932 118.519 458.812 124.333 464.041 130.841C469.196 137.375 473.796 144.434 477.78 151.925C485.566 166.918 491.924 182.785 496.749 199.266C497.417 201.301 497.975 203.374 498.524 205.451L500.21 211.673C501.245 215.852 502.207 220.073 503.16 224.291C504.478 232.807 505.823 241.324 507.074 249.859C507.126 250.212 507.075 250.575 506.931 250.894C506.786 251.213 506.554 251.472 506.269 251.633L506.248 251.644C499.127 255.673 491.822 259.281 484.363 262.453C480.625 264.013 476.853 265.467 473.046 266.814C469.226 268.1 465.393 269.345 461.52 270.416C453.78 272.562 445.942 274.24 438.04 275.443C430.151 276.631 422.209 277.33 414.251 277.537L414.208 277.538C414.035 277.543 413.868 277.472 413.742 277.339C410.16 273.532 406.541 269.772 402.991 265.924C402.961 265.892 402.944 265.849 402.942 265.803C402.941 265.756 402.955 265.711 402.982 265.677C403.009 265.642 403.048 265.62 403.089 265.616C403.13 265.612 403.171 265.626 403.203 265.655C407.064 269.106 410.857 272.645 414.686 276.138L414.178 275.94C422.058 275.274 429.881 274.06 437.652 272.61C445.422 271.141 453.108 269.186 460.701 266.89C468.296 264.595 475.787 261.923 483.173 258.874C490.551 255.832 497.822 252.441 504.908 248.604L504.083 250.388C502.927 241.868 501.867 233.327 500.78 224.787C499.988 220.597 499.236 216.396 498.38 212.208L496.95 205.957C496.48 203.87 496.001 201.785 495.412 199.737L493.726 193.562C493.168 191.5 492.429 189.51 491.789 187.48C490.518 183.415 489.031 179.443 487.481 175.502C484.333 167.652 480.588 160.119 476.29 152.985C472.011 145.889 467.23 139.189 461.992 132.951C456.808 126.702 451.097 121.026 444.94 116.004C438.779 110.97 432.136 106.721 425.135 103.334C418.113 99.8886 410.693 97.5653 403.093 96.4317L403.082 96.4301C403.041 96.4249 403.004 96.4024 402.978 96.3674C402.951 96.3323 402.938 96.2874 402.941 96.2417C402.943 96.196 402.961 96.1531 402.991 96.1217C403.02 96.0903 403.06 96.0728 403.1 96.0728Z"
+              fill="white" />
+            <path
+              d="M500.154 251.617C501.114 253.525 501.895 255.539 502.486 257.627C503.078 259.661 503.559 261.733 503.926 263.833C504.298 265.931 504.553 268.053 504.69 270.187C504.848 272.37 504.802 274.566 504.553 276.739C503.589 274.833 502.806 272.819 502.216 270.73C501.624 268.696 501.144 266.623 500.781 264.523C500.412 262.424 500.159 260.302 500.021 258.168C499.864 255.985 499.908 253.79 500.154 251.617ZM408.064 157.254C409.237 153.561 410.85 150.062 412.859 146.852C414.846 143.578 417.206 140.609 419.88 138.02C421.243 136.731 422.694 135.565 424.222 134.534C425.769 133.519 427.404 132.683 429.102 132.038C430.805 131.425 432.569 131.045 434.353 130.907C436.116 130.815 437.881 131.001 439.597 131.458C437.888 131.555 436.189 131.809 434.517 132.216C432.893 132.655 431.306 133.252 429.775 133.999C426.753 135.57 423.946 137.614 421.437 140.068C420.147 141.273 418.921 142.559 417.763 143.921C416.569 145.255 415.463 146.688 414.345 148.122C412.151 151.03 410.073 154.075 408.064 157.254ZM449.126 137.482C451.141 139.037 452.918 140.946 454.389 143.136C455.896 145.313 457.149 147.697 458.116 150.23C459.104 152.77 459.745 155.462 460.017 158.215C460.321 160.947 460.162 163.719 459.55 166.386C459.218 163.764 458.758 161.165 458.172 158.599C457.582 156.101 456.823 153.656 455.905 151.285C454.992 148.895 453.967 146.562 452.833 144.295C451.679 142.014 450.446 139.768 449.126 137.482ZM318.076 174.097C316.954 178.944 315.751 183.831 314.3 188.599C312.86 193.368 311.303 198.07 309.946 202.838C309.309 205.083 308.695 207.342 308.153 209.614C307.881 209.363 307.61 209.099 307.339 208.848C307.846 206.721 308.4 204.608 308.955 202.495C310.217 197.674 311.468 192.866 312.589 188.031C313.745 183.21 314.607 178.35 315.468 173.436C317.262 163.636 319.196 153.861 321.19 144.1C323.172 134.326 325.261 124.592 327.561 114.884C327.575 114.839 327.603 114.801 327.641 114.779C327.678 114.757 327.722 114.752 327.762 114.765C327.801 114.774 327.836 114.799 327.858 114.836C327.88 114.874 327.888 114.919 327.88 114.963C326.701 124.909 325.249 134.802 323.621 144.655C321.981 154.522 320.234 164.349 318.076 174.097ZM361.553 240.31C360.663 240.606 359.728 240.7 358.805 240.588C358.12 237.629 357.511 234.648 356.976 231.646C356.28 227.815 355.725 223.971 355.265 220.088C354.864 216.627 354.557 213.141 354.463 209.601C350.33 208.887 346.144 208.639 341.968 208.861C337.271 209.061 332.633 210.109 328.234 211.965C324.56 213.554 321.116 215.744 318.016 218.464C317.297 217.869 316.565 217.235 315.822 216.588C319.162 213.296 322.97 210.653 327.089 208.769C331.768 206.64 336.726 205.382 341.767 205.044C345.963 204.782 350.172 205.026 354.321 205.77C353.696 202.138 353.117 198.506 352.61 194.86C351.973 190.33 351.371 185.786 350.852 181.229C350.392 176.659 349.979 172.102 349.719 167.506C349.436 162.921 349.389 158.321 349.578 153.73C349.578 153.706 349.583 153.683 349.592 153.662C349.601 153.64 349.613 153.621 349.628 153.605C349.644 153.589 349.662 153.577 349.682 153.569C349.701 153.56 349.722 153.557 349.743 153.558C349.782 153.563 349.818 153.583 349.846 153.614C349.874 153.645 349.892 153.686 349.896 153.73C350.168 158.286 350.663 162.817 351.242 167.334C351.796 171.851 352.492 176.342 353.235 180.833C353.92 185.324 354.687 189.801 355.501 194.279L358.026 207.646C358.073 207.884 358.077 208.131 358.038 208.372C357.999 208.612 357.918 208.841 357.8 209.046C357.681 209.252 357.528 209.428 357.348 209.567C357.168 209.705 356.965 209.802 356.751 209.852C356.55 209.9 356.342 209.909 356.138 209.878L356.114 209.865C355.701 209.799 355.288 209.746 354.887 209.667C355.976 212.904 356.917 216.202 357.707 219.547C358.627 223.311 359.43 227.115 360.114 230.932C360.681 234.049 361.16 237.175 361.553 240.31ZM319.715 274.11C321.261 275.867 322.83 277.637 324.411 279.38L293.333 279.288C276.603 279.143 259.86 279.09 243.13 278.839C226.399 278.654 209.669 278.394 192.938 278.059L167.83 277.452L155.288 277.148L142.734 276.738L155.288 276.329L167.83 276.025L192.938 275.418C209.669 275.101 226.399 274.841 243.13 274.638C259.86 274.387 276.603 274.335 293.333 274.189L319.715 274.11Z"
+              fill="white" />
+            <path
+              d="M544.327 276.738L531.774 277.148L519.231 277.452L494.124 278.046C477.393 278.363 460.663 278.623 443.932 278.826C427.19 279.077 410.459 279.129 393.728 279.275L391.321 279.288C392.879 277.677 394.436 275.986 395.971 274.216C411.958 274.348 427.933 274.414 443.932 274.652C460.663 274.824 477.393 275.083 494.124 275.431L519.232 276.026L531.774 276.329L544.327 276.738ZM176.084 122.274C175.414 121.865 174.481 121.573 174.008 122.045C173.804 122.352 173.66 122.703 173.586 123.076C173.512 123.449 173.51 123.836 173.58 124.21C173.754 125.931 174.095 127.625 174.599 129.262C175.53 132.615 176.724 135.904 177.905 139.192C179.147 142.475 180.295 145.816 181.51 149.117L185.027 159.076L191.938 179.012C193.122 182.312 194.277 185.63 195.589 188.843C196.2 190.451 196.924 192.002 197.754 193.482C198.145 194.138 198.755 194.953 199.124 194.735C199.402 194.498 199.601 194.165 199.69 193.788C199.825 193.369 199.931 192.938 200.009 192.501C200.027 192.956 200.014 193.412 199.971 193.865C199.954 194.381 199.775 194.875 199.464 195.257C199.353 195.365 199.221 195.442 199.079 195.481C198.936 195.521 198.788 195.523 198.644 195.487C198.399 195.431 198.166 195.324 197.956 195.173C197.59 194.903 197.25 194.592 196.942 194.243C195.823 192.886 194.819 191.417 193.943 189.853C192.221 186.788 190.643 183.624 189.216 180.375C187.739 177.167 186.456 173.869 185.136 170.592C183.865 167.291 182.664 163.962 181.469 160.631C180.338 157.273 179.2 153.919 178.132 150.537C177.104 147.135 176.03 143.766 175.108 140.313C174.115 136.851 173.337 133.315 172.78 129.732C172.49 127.897 172.405 126.029 172.527 124.17C172.575 123.681 172.674 123.2 172.823 122.738C172.966 122.213 173.283 121.77 173.708 121.498C173.921 121.392 174.152 121.339 174.385 121.343C174.618 121.347 174.847 121.408 175.057 121.522C175.435 121.706 175.782 121.961 176.084 122.274Z"
+              fill="white" />
+            <path
+              d="M173.047 124.371C176.815 124.93 180.621 125.095 184.416 124.865C188.205 124.716 191.987 124.382 195.745 123.832C203.268 122.763 210.73 121.213 218.095 119.19C225.497 117.318 232.766 114.851 240.059 112.451L250.904 108.486C254.505 107.108 258.085 105.66 261.716 104.338C258.248 106.109 254.729 107.754 251.23 109.469L240.522 114.013C238.715 114.704 236.904 115.384 235.085 116.039C233.263 116.68 231.466 117.416 229.619 117.971C225.936 119.118 222.271 120.34 218.534 121.27C214.819 122.296 211.054 123.078 207.291 123.861C203.505 124.496 199.719 125.155 195.896 125.461C188.289 126.119 180.504 126.358 173.047 124.371ZM274.143 141.953C270.476 142.93 266.89 144.251 263.421 145.901C261.679 146.691 259.945 147.51 258.231 148.371C256.538 149.288 254.811 150.117 253.149 151.104C246.429 154.885 239.891 159.056 233.561 163.602C227.156 168.023 221.028 172.926 214.858 177.77L205.778 185.323C202.778 187.884 199.817 190.505 196.772 193.023C199.535 190.136 202.382 187.35 205.19 184.506L213.974 176.455C215.474 175.163 216.984 173.884 218.503 172.618C220.027 171.36 221.516 170.047 223.088 168.861C226.21 166.458 229.313 164.019 232.543 161.793C235.731 159.494 239.038 157.407 242.329 155.297C245.691 153.326 249.041 151.326 252.522 149.624C259.439 146.192 266.614 143.068 274.143 141.953Z"
+              fill="white" />
+            <path d="M258.871 102.359L275.154 144.54L290.099 125.659L281.396 103.115L258.871 102.359Z" fill="white" />
+            <path
+              d="M414.348 247.707C407.022 263.266 396.827 276.905 384.439 287.721C378.233 293.27 371.128 297.425 363.514 299.955C359.658 301.213 355.629 301.667 351.627 301.294C350.625 301.155 349.632 300.953 348.651 300.687C347.674 300.392 346.717 300.018 345.788 299.569C343.996 298.615 342.289 297.474 340.688 296.162C337.542 293.574 334.524 290.797 331.647 287.843C328.764 284.919 325.93 281.94 323.146 278.906L306.307 260.921C300.622 254.907 295.357 248.412 290.56 241.495C285.715 234.71 280.804 227.983 276.025 221.14L277.319 221.87C273.861 221.719 270.436 221.064 267.13 219.921C263.863 218.822 260.688 217.406 257.641 215.688C254.568 213.969 251.675 211.872 249.018 209.434C248.298 208.761 247.644 208.004 247.068 207.175C246.429 206.189 246.045 205.025 245.959 203.811C245.912 202.598 246.182 201.396 246.737 200.353C247.239 199.382 247.902 198.527 248.69 197.834L248.543 199.874L247.446 198.383C247.114 197.844 246.8 197.287 246.496 196.725C245.901 195.525 245.52 194.208 245.372 192.845C245.254 191.433 245.491 190.011 246.056 188.74C246.613 187.498 247.438 186.432 248.456 185.636L248.97 187.425C248.085 187.359 247.224 187.075 246.448 186.593C245.672 186.111 245.001 185.443 244.483 184.637C243.975 183.874 243.615 183 243.427 182.072C243.239 181.144 243.228 180.182 243.393 179.248C243.672 177.429 244.545 175.791 245.844 174.654C246.468 174.103 247.184 173.696 247.949 173.457C248.714 173.217 249.515 173.149 250.303 173.257L250.328 173.26C250.368 173.266 250.405 173.289 250.431 173.325C250.457 173.36 250.469 173.405 250.466 173.451C250.463 173.496 250.444 173.539 250.414 173.57C250.384 173.6 250.344 173.617 250.303 173.616C248.834 173.575 247.409 174.178 246.331 175.297C245.283 176.37 244.631 177.842 244.502 179.425C244.422 180.172 244.482 180.93 244.678 181.649C244.873 182.369 245.201 183.035 245.639 183.605C246.038 184.157 246.537 184.609 247.103 184.93C247.669 185.251 248.289 185.434 248.923 185.468C249.104 185.452 249.286 185.501 249.441 185.608C249.597 185.715 249.717 185.875 249.786 186.065C249.855 186.254 249.867 186.463 249.822 186.661C249.778 186.859 249.678 187.036 249.537 187.166L249.436 187.257C248.731 187.903 248.173 188.729 247.809 189.665C247.462 190.578 247.35 191.582 247.486 192.563C247.66 193.578 248.004 194.546 248.5 195.418C248.776 195.862 249.063 196.3 249.354 196.735L250.341 197.982C250.452 198.122 250.536 198.284 250.591 198.46C250.645 198.636 250.668 198.823 250.658 199.009C250.648 199.194 250.605 199.376 250.533 199.544C250.46 199.711 250.358 199.861 250.234 199.985L250.227 199.991L250.194 200.023C249.699 200.51 249.286 201.092 248.974 201.741C248.688 202.308 248.558 202.957 248.6 203.606C248.681 204.244 248.912 204.847 249.269 205.352C249.74 205.96 250.265 206.514 250.834 207.007C253.383 209.166 256.138 211.003 259.049 212.485C261.951 214.041 264.966 215.319 268.061 216.303C271.111 217.283 274.251 217.867 277.42 218.042L277.428 218.042C277.677 218.053 277.92 218.124 278.142 218.25C278.364 218.376 278.559 218.554 278.714 218.772C283.531 225.582 288.215 232.508 292.966 239.376C297.578 246.285 302.584 252.852 307.954 259.036L323.986 277.958C326.684 281.073 329.443 284.115 332.304 287.031C335.131 289.969 338.148 292.671 341.33 295.114C342.892 296.323 344.567 297.34 346.324 298.146C347.197 298.5 348.091 298.785 349 298.997C349.916 299.182 350.84 299.309 351.769 299.377C355.532 299.476 359.279 298.807 362.828 297.404C366.409 296.013 369.869 294.258 373.164 292.16C376.493 290.081 379.696 287.756 382.75 285.2C395.002 274.93 405.347 261.854 414.074 247.522C414.097 247.483 414.132 247.456 414.172 247.446C414.213 247.436 414.255 247.444 414.29 247.468C414.326 247.492 414.351 247.53 414.362 247.575C414.373 247.619 414.368 247.667 414.348 247.707Z"
+              fill="white" />
+            <path
+              d="M250.315 173.616L250.292 173.618H250.29L250.247 173.611C248.419 173.373 246.64 172.788 244.986 171.882C244.071 171.385 243.302 170.605 242.77 169.635C242.514 169.086 242.372 168.479 242.355 167.861C242.337 167.242 242.444 166.626 242.668 166.06C243.412 163.926 244.872 162.202 246.736 161.257C247.634 160.787 248.583 160.449 249.559 160.252C250.604 159.983 251.69 159.985 252.734 160.257C256.192 161.34 259.655 162.401 263.099 163.537C266.544 164.665 269.993 165.779 273.418 166.982L271.696 169.144C271.023 167.421 270.405 165.67 269.762 163.932L269.738 163.867C269.604 163.504 269.604 163.096 269.738 162.733C269.873 162.37 270.13 162.082 270.455 161.932C270.66 161.837 270.883 161.802 271.103 161.828C273.663 162.138 276.2 162.65 278.696 163.359C279.982 163.709 281.237 164.189 282.446 164.792C282.768 164.958 283.079 165.149 283.376 165.364L283.836 165.711C283.994 165.859 284.145 166.016 284.287 166.183C284.439 166.333 284.566 166.512 284.662 166.711C284.764 166.887 284.858 167.068 284.942 167.255L285.373 168.24C287.429 173.454 289.338 178.64 291.281 183.854C292.255 186.479 293.233 189.004 294.053 191.814L294.174 192.373C294.195 192.515 294.229 192.654 294.274 192.789C294.366 193.085 294.483 193.37 294.624 193.64C294.919 194.221 295.26 194.771 295.644 195.284C296.429 196.347 297.268 197.359 298.157 198.315C301.801 202.145 305.62 205.76 309.599 209.147C313.554 212.627 317.479 216.053 321.562 219.265C325.627 222.48 329.881 225.355 334.213 228.128L337.473 230.194C338.55 230.863 339.625 231.482 340.733 232.088C342.933 233.308 345.196 234.426 347.496 235.421C349.8 236.396 352.12 237.346 354.469 238.07C355.626 238.429 356.799 238.717 357.984 238.933C359.011 239.164 360.068 239.168 361.097 238.946L361.238 238.897C361.225 238.884 361.106 238.953 361.192 238.912L361.383 238.821L361.763 238.639L362.524 238.275L364.017 237.533C365 237.024 365.988 236.537 366.934 235.977C368.843 234.911 370.636 233.606 372.28 232.084C375.465 228.749 378.382 225.107 380.997 221.2C381.022 221.164 381.059 221.141 381.1 221.135C381.14 221.129 381.181 221.14 381.214 221.166C381.247 221.192 381.27 221.232 381.279 221.276C381.287 221.321 381.28 221.367 381.259 221.406C380.116 223.521 378.934 225.605 377.676 227.653C376.433 229.751 375.009 231.706 373.425 233.49C371.788 235.263 369.976 236.821 368.024 238.134C367.062 238.801 366.086 239.431 365.087 239.994C364.589 240.277 364.088 240.573 363.596 240.833L362.855 241.235L362.484 241.436L362.299 241.537C362.16 241.61 362.016 241.672 361.87 241.723L362.011 241.674C361.271 241.967 360.493 242.118 359.709 242.122C359.02 242.137 358.332 242.105 357.647 242.025C356.339 241.86 355.04 241.614 353.757 241.288C351.245 240.648 348.771 239.829 346.352 238.837C343.94 237.861 341.57 236.762 339.242 235.538C338.08 234.93 336.928 234.239 335.804 233.542L332.504 231.435C323.752 225.664 315.546 218.912 308.014 211.283C304.184 207.565 300.533 203.622 297.076 199.471C296.207 198.413 295.392 197.299 294.637 196.136C294.249 195.536 293.899 194.907 293.59 194.252C293.426 193.907 293.292 193.545 293.19 193.171C293.133 192.973 293.091 192.769 293.067 192.563C293.036 192.351 293.006 192.254 292.978 192.092C292.238 189.436 291.375 186.824 290.39 184.269C288.474 179.081 286.32 174.006 283.936 169.067L283.476 168.19C283.41 168.068 283.338 167.95 283.261 167.836C283.207 167.724 283.128 167.631 283.032 167.564C282.942 167.492 282.881 167.409 282.778 167.336L282.438 167.125C282.196 166.979 281.944 166.853 281.686 166.747C280.56 166.302 279.402 165.967 278.224 165.748C275.797 165.293 273.35 164.989 270.894 164.836L272.235 162.732C272.929 164.445 273.649 166.146 274.312 167.874C274.419 168.153 274.453 168.459 274.41 168.759C274.367 169.058 274.249 169.337 274.07 169.564C273.89 169.791 273.657 169.957 273.397 170.041C273.137 170.125 272.861 170.125 272.601 170.04L272.591 170.037C269.145 168.909 265.723 167.692 262.297 166.49C258.869 165.295 255.462 164.026 252.049 162.778C251.345 162.565 250.607 162.53 249.889 162.673C249.089 162.778 248.304 162.997 247.553 163.327C246.058 163.928 244.83 165.158 244.131 166.755C243.955 167.089 243.847 167.461 243.815 167.846C243.783 168.232 243.828 168.62 243.946 168.984C244.295 169.779 244.837 170.447 245.511 170.912C247.013 171.945 248.637 172.736 250.336 173.262L250.292 173.255L250.315 173.257C250.356 173.26 250.394 173.28 250.421 173.314C250.449 173.347 250.464 173.391 250.464 173.436C250.464 173.482 250.449 173.525 250.421 173.559C250.394 173.592 250.356 173.612 250.315 173.616Z"
+              fill="white" />
+            <path d="M249.405 172.651L255.716 173.731L249.349 174.254L249.405 172.651Z" fill="white" />
+            <path d="M249.004 185.646L258.428 187.319L248.887 187.244L249.004 185.646Z" fill="white" />
+            <path d="M249.635 198.153L256.537 201.1L249.256 199.701L249.635 198.153Z" fill="white" />
+            <path
+              d="M242.72 156.207C244.096 156.025 245.487 156.037 246.86 156.242C248.212 156.412 249.549 156.711 250.855 157.137L251.269 157.272L251.357 157.582C251.746 158.828 252.007 160.12 252.135 161.433C251.349 160.448 250.666 159.367 250.098 158.209L250.6 158.653C249.245 158.518 247.902 158.253 246.588 157.86C245.242 157.492 243.942 156.937 242.72 156.207ZM266.092 144.291C266.848 145.657 267.535 147.056 268.198 148.467C268.866 149.876 269.495 151.303 270.11 152.737L270.239 153.037L270.098 153.386C269.69 154.391 269.308 155.411 268.877 156.403L268.891 155.68C270.558 159.815 272.089 164.014 273.407 168.317L273.144 168.045C274.403 168.656 275.656 169.288 276.883 170.001C275.523 169.723 274.187 169.363 272.858 168.983L272.702 168.938L272.594 168.711C270.698 164.687 269.015 160.561 267.468 156.369L267.33 155.996L267.482 155.645C267.913 154.652 268.393 153.686 268.846 152.706L268.834 153.354C268.323 151.87 267.825 150.379 267.367 148.869C266.903 147.362 266.463 145.843 266.092 144.291Z"
+              fill="white" />
+            <path
+              d="M250.728 157.895C252.135 157.393 253.574 157.005 255.031 156.733C256.474 156.447 257.923 156.222 259.377 156.067C260.831 155.907 262.291 155.822 263.757 155.795C265.234 155.752 266.712 155.829 268.179 156.025C266.772 156.529 265.334 156.918 263.876 157.189C262.433 157.475 260.984 157.702 259.53 157.853C258.076 158.01 256.615 158.097 255.15 158.122C253.673 158.165 252.195 158.089 250.728 157.895ZM136.883 139.64C126.177 141.282 115.456 142.721 104.72 143.956C93.9865 145.235 83.2392 146.328 72.489 147.384C61.7345 148.381 50.9768 149.337 40.205 150.107C29.4363 150.923 18.6522 151.532 7.85242 151.933C18.5577 150.287 29.2786 148.847 40.0152 147.612C50.7484 146.334 61.4957 145.241 72.2462 144.189C83.001 143.196 93.7587 142.24 104.531 141.47C115.299 140.656 126.083 140.046 136.883 139.64ZM160.236 200.136C153.894 206.79 147.374 213.199 140.79 219.522C134.218 225.86 127.54 232.053 120.841 238.218C114.109 244.336 107.353 250.423 100.492 256.366C93.6431 262.324 86.7289 268.193 79.635 273.816C85.9742 267.159 92.4938 260.748 99.0778 254.426C105.65 248.089 112.329 241.896 119.029 235.734C125.764 229.618 132.52 223.531 139.381 217.59C146.231 211.632 153.144 205.761 160.236 200.136ZM110.943 177.279C106.357 179.259 101.703 180.932 97.024 182.496C92.3495 184.08 87.634 185.482 82.9105 186.849C78.174 188.158 73.4286 189.427 68.6426 190.516C63.8606 191.624 59.0541 192.621 54.1776 193.31C58.762 191.326 63.4164 189.652 68.0953 188.088C72.7701 186.505 77.4856 185.103 82.21 183.74C86.9473 182.435 91.6927 181.165 96.479 180.077C101.261 178.97 106.067 177.971 110.943 177.279ZM97.3726 210.561C91.8933 215.167 86.2641 219.505 80.5825 223.748C74.9101 228.008 69.149 232.109 63.3709 236.179C57.5643 240.198 51.739 244.183 45.825 248.009C39.9207 251.852 33.9625 255.599 27.8535 259.075C33.3312 254.465 38.9595 250.126 44.6416 245.884C50.3146 241.625 56.0754 237.524 61.8555 233.457C67.6638 229.442 73.4894 225.457 79.4035 221.631C85.3083 217.789 91.2658 214.041 97.3726 210.561ZM403.199 166.375C401.55 170.931 399.873 175.473 398.108 179.969C396.362 184.475 394.626 188.986 392.79 193.446C390.967 197.911 389.197 202.405 387.331 206.848C385.489 211.304 383.534 215.701 381.568 220.092L381.324 219.022C384.748 222.007 388.124 225.065 391.58 228.001C395.023 230.956 398.553 233.78 402.076 236.614C405.617 239.422 409.192 242.176 412.765 244.934C416.343 247.684 419.876 250.503 423.415 253.314L422.08 253.425C426.347 248.365 430.337 243.022 434.028 237.425C437.768 231.865 441.231 226.078 444.401 220.091C445.979 217.096 447.46 214.041 448.843 210.925C450.2 207.798 451.419 204.602 452.568 201.37C453.67 198.115 454.615 194.797 455.398 191.428C456.156 188.04 456.721 184.601 457.087 181.132C457.089 181.115 457.093 181.099 457.1 181.085C457.107 181.07 457.117 181.057 457.128 181.047C457.14 181.037 457.153 181.029 457.167 181.024C457.181 181.019 457.196 181.018 457.211 181.019C457.238 181.023 457.264 181.038 457.283 181.062C457.301 181.085 457.312 181.116 457.312 181.147C457.227 184.674 456.907 188.189 456.355 191.663C455.74 195.133 454.95 198.562 453.99 201.932C451.971 208.644 449.404 215.134 446.323 221.319C443.237 227.491 439.766 233.411 435.936 239.036C432.108 244.666 427.965 250.018 423.531 255.059L423.524 255.066C423.352 255.261 423.122 255.379 422.877 255.398C422.633 255.417 422.391 255.336 422.196 255.17C418.743 252.228 415.286 249.294 411.874 246.291C408.457 243.296 405.041 240.298 401.592 237.352C398.124 234.433 394.664 231.504 391.117 228.706C387.583 225.889 383.968 223.194 380.402 220.426C380.259 220.315 380.155 220.153 380.107 219.966C380.06 219.779 380.071 219.579 380.14 219.401L380.157 219.356C381.897 214.847 383.648 210.343 385.511 205.899C387.351 201.442 389.287 197.035 391.17 192.6C393.04 188.159 395.01 183.77 396.969 179.375C398.91 174.971 400.939 170.612 402.996 166.268C403.009 166.24 403.032 166.218 403.059 166.208C403.086 166.198 403.116 166.2 403.142 166.213C403.168 166.227 403.189 166.251 403.199 166.281C403.21 166.311 403.21 166.345 403.199 166.375ZM341.415 79.3774C341.882 79.3593 342.325 79.1387 342.65 78.7622C342.975 78.3856 343.156 77.8825 343.156 77.3589C343.156 76.8353 342.975 76.3322 342.65 75.9556C342.325 75.579 341.882 75.3584 341.415 75.3403C340.947 75.3584 340.504 75.579 340.179 75.9556C339.854 76.3322 339.673 76.8353 339.673 77.3589C339.673 77.8825 339.854 78.3856 340.179 78.7622C340.504 79.1387 340.947 79.3593 341.415 79.3774Z"
+              fill="white" />
+          </svg>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Subscription section -->
+
+  <!-- Testimonial Slider Script -->
+  <script>
+    let images = [
+      { src: "assets/images/user1.png", content: "The gemstone’s color is breathtaking — it catches light from every angle." },
+      { src: "assets/images/user2.png", content: "I absolutely love my new necklace — it sparkles beautifully every day!" },
+      { src: "assets/images/user3.png", content: "The craftsmanship is stunning, and the ring fits me perfectly well." },
+      { src: "assets/images/user4.png", content: "Such elegant earrings! I’ve received compliments everywhere I go now." },
+      { src: "assets/images/user5.png", content: "Exceptional quality jewelry — it looks even better than the online photos." },
+      { src: "assets/images/user6.png", content: "This pendant shines gorgeously; it feels luxurious yet perfectly elegant." },
+      { src: "assets/images/user7.png", content: "The detailing is incredible; you can tell it’s handcrafted with real care." },
+      { src: "assets/images/user8.png", content: "Beautiful design, perfect fit, and the sparkle just catches every light." },
+      { src: "assets/images/user9.webp", content: "Every piece I’ve bought here feels unique and truly high-quality." },
+    ];
+
+    let centerIndex = 3;
+
+    const positions2200 = [
+      { left: 7, top: 38, scale: 1, opacity: 0.5 },
+      { left: 7, top: 38, scale: 1, opacity: 0.5 },
+      { left: 22.5, top: 114, scale: 1.3, opacity: 0.6 },
+      { left: 37, top: 28, scale: 1.1, opacity: 0.7 },
+      { left: 51, top: 75, scale: 1.3, opacity: 1 }, // center
+      { left: 67.5, top: 31, scale: 1.1, opacity: 0.7 },
+      { left: 81, top: 116, scale: 0.95, opacity: 0.6 },
+      { left: 94, top: 32, scale: 1, opacity: 0.5 },
+      { left: 94, top: 32, scale: 1, opacity: 0.5 },
+    ];
+
+    const positions1900 = [
+      { left: 7, top: 29, scale: 1, opacity: 0.5 },
+      { left: 7, top: 29, scale: 1, opacity: 0.5 },
+      { left: 22.5, top: 82, scale: 1.3, opacity: 0.6 },
+      { left: 37, top: 27, scale: 1.1, opacity: 0.7 },
+      { left: 51, top: 55, scale: 1.3, opacity: 1 }, // center
+      { left: 67.5, top: 29, scale: 1.1, opacity: 0.7 },
+      { left: 81, top: 85, scale: 0.95, opacity: 0.6 },
+      { left: 94, top: 29, scale: 1, opacity: 0.5 },
+      { left: 94, top: 29, scale: 1, opacity: 0.5 },
+    ];
+
+    const upperDeskPositions = [
+      { left: 7, top: 25, scale: 0.85, opacity: 0.5 },
+      { left: 7, top: 25, scale: 0.85, opacity: 0.5 },
+      { left: 22.5, top: 69, scale: 1.1, opacity: 0.6 },
+      { left: 37, top: 25, scale: 0.95, opacity: 0.7 },
+      { left: 51, top: 49, scale: 1.1, opacity: 1 }, // center
+      { left: 67.5, top: 27, scale: 0.95, opacity: 0.7 },
+      { left: 81, top: 73, scale: 0.95, opacity: 0.6 },
+      { left: 94, top: 25, scale: 0.85, opacity: 0.5 },
+      { left: 94, top: 25, scale: 0.85, opacity: 0.5 },
+    ];
+
+    const deskPositions = [
+      { left: 7, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 7, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 22.5, top: 58, scale: 1, opacity: 0.6 },
+      { left: 37, top: 25, scale: 0.8, opacity: 0.7 },
+      { left: 51, top: 40, scale: 1, opacity: 1 }, // center
+      { left: 67.5, top: 27, scale: 0.9, opacity: 0.7 },
+      { left: 81, top: 61, scale: 0.85, opacity: 0.6 },
+      { left: 94, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 94, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions1121 = [
+      { left: 5, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 5, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 21.5, top: 58, scale: 1, opacity: 0.6 },
+      { left: 36.5, top: 20, scale: 0.8, opacity: 0.7 },
+      { left: 51, top: 40, scale: 1, opacity: 1 }, // center
+      { left: 68, top: 24, scale: 0.9, opacity: 0.7 },
+      { left: 82.5, top: 61, scale: 0.85, opacity: 0.6 },
+      { left: 95, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 95, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions1051 = [
+      { left: 4, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 4, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 20.5, top: 58, scale: 1, opacity: 0.6 },
+      { left: 35.5, top: 20, scale: 0.8, opacity: 0.7 },
+      { left: 51, top: 40, scale: 1, opacity: 1 }, // center
+      { left: 69.5, top: 24, scale: 0.9, opacity: 0.7 },
+      { left: 84, top: 61, scale: 0.85, opacity: 0.6 },
+      { left: 95, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 95, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions1030 = [
+      { left: 2, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 2, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 19.5, top: 70, scale: 1, opacity: 0.6 },
+      { left: 35.5, top: 23, scale: 0.8, opacity: 0.7 },
+      { left: 51, top: 46, scale: 1, opacity: 1 }, // center
+      { left: 69.5, top: 26, scale: 0.9, opacity: 0.7 },
+      { left: 85, top: 74, scale: 0.85, opacity: 0.6 },
+      { left: 98, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 98, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions1000 = [
+      { left: -1, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -1, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 18, top: 70, scale: 1, opacity: 0.6 },
+      { left: 34.5, top: 23, scale: 0.8, opacity: 0.7 },
+      { left: 51, top: 46, scale: 1, opacity: 1 }, // center
+      { left: 71, top: 27, scale: 0.9, opacity: 0.7 },
+      { left: 87, top: 74, scale: 0.85, opacity: 0.6 },
+      { left: 100, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 100, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions900 = [
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 14.5, top: 70, scale: 1, opacity: 0.6 },
+      { left: 32.5, top: 23, scale: 0.8, opacity: 0.7 },
+      { left: 51.5, top: 46, scale: 1, opacity: 1 }, // center
+      { left: 73, top: 27, scale: 0.9, opacity: 0.7 },
+      { left: 91, top: 74, scale: 0.85, opacity: 0.6 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions790 = [
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 8.5, top: 70, scale: 1, opacity: 0.6 },
+      { left: 29.5, top: 23, scale: 0.8, opacity: 0.7 },
+      { left: 51.5, top: 46, scale: 1, opacity: 1 }, // center
+      { left: 77, top: 27, scale: 0.9, opacity: 0.7 },
+      { left: 100, top: 74, scale: 0.85, opacity: 0.6 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions720 = [
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 5.5, top: 70, scale: 1, opacity: 0.6 },
+      { left: 28.5, top: 23, scale: 0.8, opacity: 0.7 },
+      { left: 51.5, top: 46, scale: 1, opacity: 1 }, // center
+      { left: 79, top: 27, scale: 0.9, opacity: 0.7 },
+      { left: 103, top: 74, scale: 0.85, opacity: 0.6 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions662 = [
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 1.5, top: 70, scale: 1, opacity: 0.6 },
+      { left: 26.5, top: 23, scale: 0.8, opacity: 0.7 },
+      { left: 51.5, top: 46, scale: 1, opacity: 1 }, // center
+      { left: 81, top: 27, scale: 0.9, opacity: 0.7 },
+      { left: 115, top: 74, scale: 0.85, opacity: 0.6 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions580 = [
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -3.5, top: 70, scale: 1, opacity: 0.6 },
+      { left: 22.5, top: 23, scale: 0.8, opacity: 0.7 },
+      { left: 52.5, top: 46, scale: 1, opacity: 1 }, // center
+      { left: 85, top: 27, scale: 0.9, opacity: 0.7 },
+      { left: 115, top: 74, scale: 0.85, opacity: 0.6 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+    const positions556 = [
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -6.5, top: 70, scale: 1, opacity: 0.6 },
+      { left: 21.5, top: 23, scale: 0.8, opacity: 0.7 },
+      { left: 52.5, top: 46, scale: 1, opacity: 1 }, // center
+      { left: 86, top: 27, scale: 0.9, opacity: 0.7 },
+      { left: 115, top: 74, scale: 0.85, opacity: 0.6 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions520 = [
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -18.5, top: 70, scale: 1, opacity: 0.6 },
+      { left: 18.5, top: 23, scale: 0.8, opacity: 0.7 },
+      { left: 52.5, top: 46, scale: 1, opacity: 1 }, // center
+      { left: 91, top: 27, scale: 0.9, opacity: 0.7 },
+      { left: 115, top: 74, scale: 0.85, opacity: 0.6 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions480 = [
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -16.5, top: 70, scale: 1, opacity: 0.6 },
+      { left: 16.5, top: 23, scale: 0.8, opacity: 0.7 },
+      { left: 52.5, top: 46, scale: 1, opacity: 1 }, // center
+      { left: 91, top: 27, scale: 0.9, opacity: 0.7 },
+      { left: 115, top: 74, scale: 0.85, opacity: 0.6 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions450 = [
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -16.5, top: 70, scale: 1, opacity: 0.6 },
+      { left: 16.5, top: 23, scale: 0.8, opacity: 0.7 },
+      { left: 52.5, top: 46, scale: 1, opacity: 1 }, // center
+      { left: 91, top: 27, scale: 0.9, opacity: 0.7 },
+      { left: 115, top: 74, scale: 0.85, opacity: 0.6 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions436 = [
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -15, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -16.5, top: 70, scale: 1, opacity: 0.6 },
+      { left: 14.5, top: 23, scale: 0.8, opacity: 0.7 },
+      { left: 52.5, top: 46, scale: 1, opacity: 1 }, // center
+      { left: 94, top: 27, scale: 0.9, opacity: 0.7 },
+      { left: 115, top: 74, scale: 0.85, opacity: 0.6 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 115, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions408 = [
+      { left: -25, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -25, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -26.5, top: 70, scale: 1, opacity: 0.6 },
+      { left: 13.5, top: 23, scale: 0.8, opacity: 0.7 },
+      { left: 52.5, top: 46, scale: 1, opacity: 1 }, // center
+      { left: 96, top: 27, scale: 0.9, opacity: 0.7 },
+      { left: 145, top: 74, scale: 0.85, opacity: 0.6 },
+      { left: 145, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 145, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions358 = [
+      { left: -25, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -25, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -28.5, top: 70, scale: 1, opacity: 0.6 },
+      { left: 8.5, top: 23, scale: 0.8, opacity: 0.7 },
+      { left: 52.5, top: 46, scale: 1, opacity: 1 }, // center
+      { left: 103, top: 27, scale: 0.9, opacity: 0.7 },
+      { left: 145, top: 74, scale: 0.85, opacity: 0.6 },
+      { left: 145, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 145, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions380 = [
+      { left: -25, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -25, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -28.5, top: 70, scale: 1, opacity: 0.6 },
+      { left: 10.5, top: 23, scale: 0.8, opacity: 0.7 },
+      { left: 52.5, top: 46, scale: 1, opacity: 1 }, // center
+      { left: 100, top: 27, scale: 0.9, opacity: 0.7 },
+      { left: 145, top: 74, scale: 0.85, opacity: 0.6 },
+      { left: 145, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 145, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    const positions340 = [
+      { left: -25, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -25, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: -28.5, top: 70, scale: 1, opacity: 0.6 },
+      { left: 6.5, top: 23, scale: 0.8, opacity: 0.7 },
+      { left: 52.5, top: 46, scale: 1, opacity: 1 }, // center
+      { left: 105, top: 27, scale: 0.9, opacity: 0.7 },
+      { left: 145, top: 74, scale: 0.85, opacity: 0.6 },
+      { left: 145, top: 25, scale: 0.75, opacity: 0.5 },
+      { left: 145, top: 25, scale: 0.75, opacity: 0.5 },
+    ];
+
+    // Helper to choose positions based on screen width
+    function getPositions() {
+      const width = window.innerWidth;
+      if (width > 2200) return positions2200;
+      if (width > 1900) return positions1900;
+      if (width > 1600) return upperDeskPositions;
+      if (width <= 340) return positions340;
+      if (width <= 358) return positions358;
+      if (width <= 380) return positions380;
+      if (width <= 408) return positions408;
+      if (width <= 436) return positions436;
+      if (width <= 480) return positions480;
+      if (width <= 520) return positions520;
+      if (width <= 556) return positions556;
+      if (width <= 580) return positions580;
+      if (width <= 662) return positions662;
+      if (width <= 720) return positions720;
+      if (width <= 790) return positions790;
+      if (width <= 900) return positions900;
+      if (width < 1000) return positions1000;
+      if (width < 1030) return positions1030;
+      if (width <= 1070) return positions1051;
+      if (width < 1121) return positions1121;
+      return deskPositions;
+    }
+
+    function renderCarousel() {
+      let positions = getPositions();
+      const n = images.length;
+
+      images.forEach((img, i) => {
+        let posIndex = (i - centerIndex + n + n) % n; // positive modulo
+        const pos = positions[posIndex] || positions[positions.length - 1];
+        const el = document.getElementById(`img${i}`);
+
+        el.src = img.src;
+        el.style.left = `${pos.left}%`;
+        el.style.top = `${pos.top}%`;
+        el.style.transform = `translate(-50%, -50%) scale(${pos.scale})`;
+        el.style.opacity = pos.opacity;
+        el.style.zIndex = Math.round(pos.scale * 10);
+
+        // Hide first and last positions
+        if (posIndex === 0 || posIndex === positions.length - 1) {
+          el.style.visibility = "hidden";
+        } else {
+          el.style.visibility = "visible";
+        }
+
+        // Highlight the center image
+        if (posIndex === 4) el.classList.add("active"); // changed from 3 → 4
+        else el.classList.remove("active");
+      });
+
+
+      // Update content
+      const content = document.getElementById("content");
+      content.style.opacity = 0;
+      setTimeout(() => {
+        content.innerText = images[centerIndex].content;
+        content.style.opacity = 1;
+      }, 200);
+    }
+
+    // Rotate carousel to the next image
+    function slideNext() {
+      centerIndex = (centerIndex + 1) % images.length;
+      renderCarousel();
+    }
+
+    // Rotate carousel to the previous image
+    function slidePrev() {
+      centerIndex = (centerIndex - 1 + images.length) % images.length;
+      renderCarousel();
+    }
+
+    document.getElementById("next").addEventListener("click", slideNext);
+    document.getElementById("prev").addEventListener("click", slidePrev);
+
+    // Initial render
+    renderCarousel();
+
+    // Re-render carousel when window is resized
+    window.addEventListener("resize", () => {
+      renderCarousel();
+    });
+  </script>
+  <!-- End Testimonial Slider Script -->
+
+</body>
+
+</html>
